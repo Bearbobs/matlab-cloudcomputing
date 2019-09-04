@@ -15,6 +15,5 @@ class search(viewsets.ViewSet):
 
             q = self.request.query_params.get('data')
 
-            #results_mcd_prop_clean=cleaner.cleaner_mcd_prop_ls(results_mcd_prop)
-            #results_mcd_prop_clean = [{'Database':'MCD Property List','items':results_mcd_prop_clean}]
+            
             return JsonResponse("Received:"+q, safe=False)
