@@ -13,8 +13,8 @@ class search(viewsets.ViewSet):
     def list(self, request):
         if request.method == 'GET':
 
-            query_term = self.request.query_params.get('term')
+            q = self.request.query_params.get('data')
 
             #results_mcd_prop_clean=cleaner.cleaner_mcd_prop_ls(results_mcd_prop)
             #results_mcd_prop_clean = [{'Database':'MCD Property List','items':results_mcd_prop_clean}]
-            return JsonResponse("Received", safe=False)
+            return JsonResponse("Received:"+q, safe=False)
