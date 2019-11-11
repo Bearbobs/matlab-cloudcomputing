@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    
+    <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/907271/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+    <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/907271/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+    
+    <body>
+        <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/907271/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+        <p>Enter the value of volatge, then click "Submit" to submit the value:</p>
+        
+        <form id="frm1">
+          Voltage Value: <input type="text" id="field"><br>
+          <input type="button" onclick="myFunction()" value="Submit">
+        </form>
+        
+        <script>
+        function myFunction() {
+        var x = document.getElementById("field").value;
+        var request = new XMLHttpRequest()
+        request.open('GET', 'https://api.thingspeak.com/update?api_key=TN4QBLC7FRNECOVT&field1='+x, true)
+
+        request.onload = function() {
+        // Begin accessing JSON data here
+        }
+
+        // Send request
+        request.send()
+        }
+        </script>
+        
+    </body>
+</html>
