@@ -11,7 +11,7 @@ The project aims at deploying APIs for sensor data acquisition of smart-grid and
 
 * NodeMCU
 
-* Smart-Grid data simulation or actual smart-grid
+*  Actual Smart-Grid or data simulation
 
 ### API/Backend
 
